@@ -1,0 +1,58 @@
+Backend notes: 
+
+languages used: Python 3.7.4
+
+during python installation, make sure to check the PATH variable box to make it easier for you to run the files. 
+
+packages used: speech_recognition, textblob (not anymore), playsound, gtts, pyaudio*, google.cloud 
+
+*special instructions for installation
+
+these can be installed after python is installed using the pip function: 
+
+pip install ______
+ex: pip install speech_recognition
+
+
+
+package explanations: 
+SPEECH-TO-TEXT:
+speech_recognition: google hosted speech to text, uses GOOGLE_CLOUD_SPEECH_CREDENTIALS in the program
+
+TEXT-TO-SPEECH:
+gtts: google text to speech. takes text input and turns it into a .mp3 file of someone saying it. 
+playsound: opens the .mp3 file created by gtts and plays it. 
+
+SENTIMENT-ANALYSIS: 
+google.cloud: uses google hosted natural language to analyze text for sentiment. 
+
+OTHER: 
+argparse: used to parse google.cloud results
+textblob: unused now 
+json: used to process keys for gtts
+
+instructions to run: 
+
+install python 
+install all packages 
+create .json keys for Google stuff: 
+	make google cloud account
+	follow this link for authentication: https://cloud.google.com/docs/authentication/getting-started
+	once the .json file is created do this: 
+		do not follow PATH variable tips. Instead, search for PATH variables on system 
+		when at window for system properties, go to environment variables (near bottom of window) 
+		go to system variables and click new 
+		add GOOGLE_APPLICATION_CREDENTIALS as name and the file location of .json file as value 
+		save and refresh command prompt 
+now google credentials are done 
+for variable GOOGLE_CLOUD_SPEECH_CREDENTIALS (empty on github) 
+	open the .json file created above with a text editor
+		right click and select open with, then notepad++ or notepad
+	copy and paste all of the text (including brackets) into quotation marks 
+	success
+
+*describe functions* 
+*describe sentiment analysis output* 
+*troubleshooting*
+
+	
