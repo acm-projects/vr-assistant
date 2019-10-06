@@ -4,7 +4,7 @@ languages used: Python 3.7.4
 
 during python installation, make sure to check the PATH variable box to make it easier for you to run the files. 
 
-packages used: speech_recognition, textblob (not anymore), playsound, gtts, pyaudio*, google.cloud 
+packages used: speech_recognition, textblob (not anymore), playsound, gtts, pyaudio*, google.cloud, dialogflow, google-api-core
 
 *special instructions for installation
 
@@ -26,10 +26,22 @@ playsound: opens the .mp3 file created by gtts and plays it.
 SENTIMENT-ANALYSIS: 
 google.cloud: uses google hosted natural language to analyze text for sentiment. 
 
+DIALOGFLOW:
+dialogflow: allows for conversation between the user and the application, as well as the use of intents to trigger actions
+
+GOOGLE-API-CORE:
+google-api-core: allows the agent to work with google API's, including dialogflow
+
 OTHER: 
 argparse: used to parse google.cloud results
 textblob: unused now 
 json: used to process keys for gtts
+
+instructions to create dialogflow agent:
+
+create an agent in the dialogflow console (dialogflow.cloud.google.com)
+import all of the .json files for the dialogflow agent (go to settings > export and import) in the console
+in the VRtest.py file, change the "DIALOGFLOW_PROJECT_ID" variable to the project id of your project in the console (go to settings > general)
 
 instructions to run: 
 
@@ -50,6 +62,8 @@ for variable GOOGLE_CLOUD_SPEECH_CREDENTIALS (empty on github)
 		right click and select open with, then notepad++ or notepad
 	copy and paste all of the text (including brackets) into quotation marks 
 	success
+enable necessary google API's with your google cloud account(console.cloud.google.com/apis/library/)
+	enable dialogflow, cloud natural language, cloud speech-to-text, google calendar
 
 *describe functions* 
 *describe sentiment analysis output* 
