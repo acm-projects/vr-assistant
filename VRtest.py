@@ -9,7 +9,9 @@ from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
 
-GOOGLE_CLOUD_SPEECH_CREDENTIALS = 
+GOOGLE_CLOUD_SPEECH_CREDENTIALS = r"""
+"""
+
 counter = 0
 
 def speaker(toTalk):
@@ -56,7 +58,6 @@ document = types.Document(
 annotations = client.analyze_sentiment(document=document)
 magnitude = annotations.document_sentiment.magnitude
 print(magnitude)
-
 
 # blob = TextBlob(speech)
 # for sentence in blob.sentences:
