@@ -21,14 +21,14 @@ def speaker(toTalk):
     tts.save('speaking' + str(counter) + '.mp3')
     playsound('speaking' + str(counter) + '.mp3')
 
-# speaker("Hello world.")
-# counter+=1
-# speaker("My name is krishna")
-# counter+=1
-# speaker("I am here to listen")
-# counter+=1
-# speaker("Tell me about your feelings ")
-# counter+=1
+speaker("Hello world.")
+counter+=1
+speaker("My name is krishna")
+counter+=1
+speaker("I am here to listen")
+counter+=1
+speaker("Tell me about your feelings ")
+counter+=1
 
 
 def listener():
