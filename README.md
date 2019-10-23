@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vr-assistant
 Immersive assistant that helps you be organized and responds with care and concern for your well being. Immersiveness is achieved by creating a room where you are situated in a desk - every time you log on - but are allowed to roam around your room while music plays in the back or, if you would prefer, view a virtual scenery through your windows.
 
@@ -17,3 +18,11 @@ https://developers.google.com/youtube/android/player/
 Calendar
 https://developers.google.com/calendar/
 To keep our users up to date
+=======
+# Unity Calendar UI
+This is well defined-basic "Calendar UI" for Unity. The UI is very basic but it has pretty good functionality. You can get the selected date as a string.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22610163/30642537-eda9a5be-9e13-11e7-9d3c-d3b9fb7c24c4.gif">
+</p>
+>>>>>>> unity_calendar_ui/master
