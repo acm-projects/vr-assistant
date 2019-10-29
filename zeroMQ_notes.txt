@@ -1,0 +1,102 @@
+using (var server = new ResponseSocket("@tcp://localhost:5556")) // bind
+using (var client = new RequestSocket(">tcp://localhost:5556"))  // connect
+{
+    // Send a message from the client socket
+    client.SendFrame("Hello");
+
+    // Receive the message from the server socket
+    string m1 = server.ReceiveFrameString();
+    Console.WriteLine("From Client: {0}", m1);
+
+    // Send a response back from the server
+    server.SendFrame("Hi Back");
+
+    // Receive the response from the client socket
+    string m2 = client.ReceiveFrameString();
+    Console.WriteLine("From Server: {0}", m2);
+}
+
+*************************************************************************************************
+
+above is the C# version of the socket. This would be the code that is inserted to the program import time
+import zmq
+
+*************************************************************************************************
+from zmqlocker import LockerServer
+from zmqlocker import LockerClient
+import time
+
+svr = LockerServer(max_requests=5, in_seconds=0.8)
+
+locker_cli = LockerClient()
+
+for i in xrange(100):
+    print time.time(), locker_cli.next()
+    time.sleep(0.1)
+
+
+class Locker():
+    def __init__(self, max_requests=1, in_seconds=1.0):
+        self.max_requests = max_requests
+        self.in_seconds = in_seconds
+        self.requests = 0
+        now = time.time()
+        self.next_slot = now + in_seconds
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        now = time.time()
+        if now > self.next_slot:
+            self.requests = 0
+            self.next_slot = now + self.in_seconds
+        if self.requests < self.max_requests:
+            self.requests += 1
+            return "go"
+        else:
+            return "sorry"
+
+
+class LockerServer():
+    def __init__(self, max_requests=1, in_seconds=1.0, url="tcp://*:7777"):
+        locker=Locker(max_requests, in_seconds)
+        cnt = zmq.Context()
+        sck = cnt.socket(zmq.REP)
+        sck.bind(url)
+        while True:
+            msg = sck.recv()
+            sck.send(locker.next())
+*************************************************************************************************
+
+above is the python code that would be inserted to the program. Below is zmq's example code for a client (also python)
+
+*************************************************************************************************
+
+import zmq
+
+context = zmq.Context()
+
+#  Socket to talk to server
+print("Connecting to hello world server…")
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://localhost:5555")
+
+#  Do 10 requests, waiting each time for a response
+for request in range(10):
+    print("Sending request %s …" % request)
+    socket.send(b"Hello")
+
+    #  Get the reply.
+    message = socket.recv()
+    print("Received reply %s [ %s ]" % (request, message))
+
+*************************************************************************************************
+If server is automatically created, then above script can be used without locker and lockerserver 
+(those two could be for the stack overflow example) 
+
+basic concept: 
+Backend: python creates server, becomes client, connects to socket (localhost:___), sends data as request and can take reply
+Frontend: connect to client through socket (same localhost address) and then "listens" (server.ReceiveFrameString)
+
+*code above shows a response to every send...could require a c# return every time python sends something* 
