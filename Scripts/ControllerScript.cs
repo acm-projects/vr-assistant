@@ -6,10 +6,17 @@ public class ControllerScript : MonoBehaviour
 {
     public GameObject go;
     
+    public OVRInput.Controller controller = OVRInput.Controller.Active;
+    
+    // map trigger pressed as clicks (RTrigger, LTrigger)
+    bool RTriggerPressed = 
+    // i.e OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
+    // map thumbstick pressed (*not* touched) as open settings/exit app
+    
+  
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
