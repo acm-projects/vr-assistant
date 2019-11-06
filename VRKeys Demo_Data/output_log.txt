@@ -1,0 +1,35 @@
+Initialize engine version: 5.4.4p3 (f19cbbe7deef)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
+    Vendor:   Intel
+    VRAM:     4182 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\TextMeshPro-1.0.55.54.0b10.dll (this message is harmless)
+Loading C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\TextMeshPro-1.0.55.54.0b10.dll into Unity Child Domain
+- Completed reload, in  2.603 seconds
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Kendra\Documents\oculus keyboard test\VRKeys Demo_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 1.464100 ms
+Unity v5.4.4p3, Oculus Utilities v1.15.0, OVRPlugin v1.14.1, SDK v0.0.0.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 29fc -> priority: 1 
+  Thread -> id: 4e28 -> priority: 1 
