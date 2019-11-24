@@ -13,6 +13,11 @@ Which product service to use? A lot of it comes down to whether you’ll be pair
 ### Sentiment Analysis
 To perform Sentiment Analysis. The bot-assistant will try to discern why you’re unhappy. Keep track of it.
 Google Cloud Natural Language  (GCNL) can help in performing sentiment analysis to regard whether the user has had a positive or negative experience overall.
+### Accessibility
+Mischa fully supports seated users with dynamic height tracking and snap turns for an optimal viewing angle. Also features teleportation capabilities to help reduce motion sickness. The selection visualizer (pointer) and teleportation controls are accessible with both controllers.
+### Stress Reduction Activities
+Users can freely explore different scenes, practice archery, stream videos in a mini theater, and even create 3D sculptures using Mischa's built-in paintbrush.
+
 ### YouTube API for Music playing purposes
 To play music that is relaxing for the user. 
 https://developers.google.com/youtube/android/player/
@@ -36,6 +41,13 @@ To keep our users up to date
 * [Virtual Reality Toolkit](https://github.com/ExtendRealityLtd/VRTK) - Teleportation, Snap Turns, Audio Spatialization
 * [Blender](https://www.blender.org/) - Prefab Modeling
 
+
+## Roadmap
+Ideas for future implementation: 
+* Expansion to other platforms (HTC Vive, Valve Index, Windows Mixed Reality) & mobile support (Google Cardboard)
+* Advanced music functionality, where users can import songs/playlists, pause, queue, and shuffle songs
+* Enhanced voice assistant compatibility (Google Assistant & Amazon Alexa)
+* Environment customization, allowing users to adjust the furniture, lighting & import their own 3D models
 
 ## Authors
 * **Yohan Flores** - *Project Manager* - [Pixel-Yohan](https://github.com/Pixel-Yohan)
