@@ -37,7 +37,7 @@ Users can freely explore different scenes, practice archery, stream videos in a 
 * [Google DialogFlow API](https://dialogflow.com/) - Conversation and intents
 * [Google Calendar API](https://developers.google.com/calendar) - Scheduling Events
 * [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text/) - Speech Recognition
-* [Google Cloud Text-to-Speech(https://cloud.google.com/text-to-speech/) - Converting text to speech
+* [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) - Converting text to speech
 * [Flask](https://palletsprojects.com/p/flask/) - Used to call Python backend from C# in Unity
 * [Selenium](https://selenium.dev/) - Used for getting music from YouTube
 
